@@ -1,7 +1,8 @@
 class RouteConfig {
   #index = '/';
   #basket = 'basket';
-  #product = 'product/:id';
+  #camera = 'camera';
+  #product = 'camera/:id';
   #notFound = '*';
 
   get Index() {
@@ -10,6 +11,10 @@ class RouteConfig {
 
   get Basket() {
     return this.#basket;
+  }
+
+  get Camera() {
+    return this.#camera;
   }
 
   get Product() {
