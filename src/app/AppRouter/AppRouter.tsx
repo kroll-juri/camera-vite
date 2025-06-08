@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import { ScrollToTop } from '@components/utility';
 import { AppLayout } from '@layout/AppLayout';
 
 import { MainPage } from '@pages/MainPage';
@@ -28,6 +29,7 @@ export const AppRouter = () => {
   return (
     <BrowserRouter>
       <Suspense fallback={<div>Loading...</div>}>
+        <ScrollToTop />
         <Routes>
           <Route
             path={routeConfig.Index}
