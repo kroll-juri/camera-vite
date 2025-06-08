@@ -4,10 +4,11 @@
     "paths": {
       "@app/*": ["app/*"],
       "@store/*": ["app/store/*"],
-      "@hooks/*": ["hooks/*"],
       "@namespace/*": ["app/store/namespace/*"],
       "@reducer/*": ["app/store/reducer/*"],
       "@slice/*": ["app/store/slice/*"],
+      "@hooks/*": ["hooks/*"],
+      "@shared-types/*": ["types/*"],
       "@service/*": ["service/*"],
       "@api/*": ["service/api/*"],
       "@pages/*": ["pages/*"],
