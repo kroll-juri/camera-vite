@@ -1,5 +1,6 @@
+import { BreadCrumbs } from '@components/blocks/BreadCrumbs';
+
 import { Basket } from '@basket-page/components/Basket';
-import { BreadCrumbs } from '@basket-page/components/BreadCrumbs';
 
 export const BasketPage = () => {
   return (
