@@ -1,3 +1,5 @@
+import { Dispatch,SetStateAction } from 'react';
+
 import { store } from '@app/store';
 
 export type State = ReturnType<typeof store.getState>;
@@ -8,3 +10,5 @@ export interface OrderType {
   coupon: string | null;
   tel: string;
 }
+
+export type SetState<T> = Dispatch<SetStateAction<T>>;
