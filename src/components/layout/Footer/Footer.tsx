@@ -1,24 +1,15 @@
+import { Logo } from '@app-ui/Logo';
+
 export const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer__info">
-          <a
-            className="footer__logo"
-            href="index.html"
-            aria-label="Переход на главную"
-          >
-            <svg
-              width="100"
-              height="36"
-              aria-hidden="true"
-            >
-              <use xlinkHref="#icon-logo-mono"></use>
-            </svg>
-          </a>
-          <p className="footer__description">
-            Интернет-магазин фото- и видеотехники
-          </p>
+          <Logo
+            xlinkHrefProp={'-mono'}
+            classNameProp={'footer'}
+          />
+          <p className="footer__description">Интернет-магазин фото- и видеотехники</p>
           <ul className="social">
             <li className="social__item">
               <a
