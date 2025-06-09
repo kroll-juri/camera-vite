@@ -1,3 +1,4 @@
+import { NavBar } from '@app-header/components/NavBar';
 import { Logo } from '@app-ui/Logo';
 
 export const Header = () => {
@@ -11,42 +12,7 @@ export const Header = () => {
           classNameProp={'header'}
           xlinkHrefProp={''}
         />
-        <nav className="main-nav header__main-nav">
-          <ul className="main-nav__list">
-            <li className="main-nav__item">
-              <a
-                className="main-nav__link"
-                href="catalog.html"
-              >
-                Каталог
-              </a>
-            </li>
-            <li className="main-nav__item">
-              <a
-                className="main-nav__link"
-                href="#"
-              >
-                Гарантии
-              </a>
-            </li>
-            <li className="main-nav__item">
-              <a
-                className="main-nav__link"
-                href="#"
-              >
-                Доставка
-              </a>
-            </li>
-            <li className="main-nav__item">
-              <a
-                className="main-nav__link"
-                href="#"
-              >
-                О компании
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <NavBar />
         <div className="form-search">
           <form>
             <label>
