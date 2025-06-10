@@ -2,7 +2,7 @@ import { modalController } from '@components/blocks/ModalComponent/helpers';
 
 import { CatalogCallItemProps } from '@main-page/types/types';
 
-export const CatalogCallItem = ({ activeCamera, setIsModalState }: CatalogCallItemProps) => {
+export const CatalogCallItem = ({ props, setModalState }: CatalogCallItemProps) => {
   return (
     <>
       <p className="title title--h4">Свяжитесь со мной</p>
@@ -46,7 +46,7 @@ export const CatalogCallItem = ({ activeCamera, setIsModalState }: CatalogCallIt
               height="9"
               aria-hidden="true"
             >
-              <use xlinkHref="#icon-snowflake"></use>
+              <use xlinkHref="#icon-snowflake" />
             </svg>
           </span>
           <input
@@ -68,7 +68,7 @@ export const CatalogCallItem = ({ activeCamera, setIsModalState }: CatalogCallIt
             height="16"
             aria-hidden="true"
           >
-            <use xlinkHref="#icon-add-basket"></use>
+            <use xlinkHref="#icon-add-basket" />
           </svg>
           Заказать
         </button>
@@ -77,14 +77,14 @@ export const CatalogCallItem = ({ activeCamera, setIsModalState }: CatalogCallIt
         className="cross-btn"
         type="button"
         aria-label="Закрыть попап"
-        onClick={() => modalController.handleModalCloseOnButtonCLick(setIsModalState)}
+        onClick={() => modalController.handleChangeModalState(setModalState, false)}
       >
         <svg
           width="10"
           height="10"
           aria-hidden="true"
         >
-          <use xlinkHref="#icon-close"></use>
+          <use xlinkHref="#icon-close" />
         </svg>
       </button>
     </>

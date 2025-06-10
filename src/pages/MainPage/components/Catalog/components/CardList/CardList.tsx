@@ -11,7 +11,7 @@ import { CatalogCallItem } from '@main-page/components/Catalog/components/Catalo
 
 export const CardList = () => {
   const [activeCardId, setActiveCardId] = useState<number | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalState, setModalState] = useState(false);
 
   const handleActiveCard = (id: number) => {
     setActiveCardId(id);
@@ -27,17 +27,18 @@ export const CardList = () => {
             props={{ ...item }}
             key={item.id}
             onActiveCardHandler={handleActiveCard}
-            setIsModalState={setIsModalOpen}
+            setModalState={setModalState}
           />
         ))}
       {activeCard && (
         <ModalComponent
           className={''}
-          isActive={isModalOpen}
+          isActive={modalState}
+          setModalState={setModalState}
         >
           <CatalogCallItem
-            activeCamera={activeCard}
-            setIsModalState={setIsModalOpen}
+            props={activeCard}
+            setModalState={setModalState}
           />
         </ModalComponent>
       )}

@@ -9,8 +9,8 @@ class ModalController {
     document.body.classList.remove('scroll-lock');
   }
 
-  handleModalCloseOnButtonCLick(setFn: SetState<boolean>) {
-    setFn(false);
+  handleChangeModalState(setFn: SetState<boolean>, value: boolean) {
+    setFn(value);
   }
 }
 

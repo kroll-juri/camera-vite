@@ -4,7 +4,7 @@ import { routeConfig } from '@app/AppRouter/routeConfig';
 
 import { CardItemProps } from '@main-page/types/types';
 
-export const CardItem = ({ props, onActiveCardHandler, setIsModalState }: CardItemProps) => {
+export const CardItem = ({ props, onActiveCardHandler, setModalState }: CardItemProps) => {
   const {
     name,
     price,
@@ -88,7 +88,7 @@ export const CardItem = ({ props, onActiveCardHandler, setIsModalState }: CardIt
           type="button"
           onClick={() => {
             onActiveCardHandler(cameraId);
-            setIsModalState(true);
+            setModalState(true);
           }}
         >
           Купить
