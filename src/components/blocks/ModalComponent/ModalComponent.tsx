@@ -1,42 +1,23 @@
-import { useEffect } from 'react';
+import ReactFocusLock from 'react-focus-lock';
 
-import { modalController } from '@components/blocks/ModalComponent/helpers';
 import { ModalComponentProps } from '@components/blocks/ModalComponent/types/types';
 
+import { useModalClose } from '@hooks/useModalClose';
+
 export const ModalComponent = ({ children, className = '', isActive, setModalState }: ModalComponentProps) => {
-  const handleOnEscapePressClose = (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      modalController.handleChangeModalState(setModalState, false);
-    }
-  };
-
-  const handleOnOverlayClickClose = () => {
-    modalController.handleChangeModalState(setModalState, false);
-  };
-  useEffect(() => {
-    if (isActive) {
-      modalController.addScrollLockBody();
-    } else {
-      modalController.removeScrollLockBody();
-    }
-  }, [isActive]);
-
-  useEffect(() => {
-    document.addEventListener('keydown', handleOnEscapePressClose);
-    return () => {
-      document.removeEventListener('keydown', handleOnEscapePressClose);
-    };
-  }, []);
+  const handleOnOverlayClickClose = useModalClose(setModalState, isActive);
 
   return (
-    <div className={`modal ${isActive ? 'is-active' : ''} ${className}`}>
-      <div className="modal__wrapper">
-        <div
-          className="modal__overlay"
-          onClick={handleOnOverlayClickClose}
-        ></div>
-        <div className="modal__content">{children}</div>
+    <ReactFocusLock>
+      <div className={`modal ${isActive ? 'is-active' : ''} ${className}`}>
+        <div className="modal__wrapper">
+          <div
+            className="modal__overlay"
+            onClick={handleOnOverlayClickClose}
+          ></div>
+          <div className="modal__content">{children}</div>
+        </div>
       </div>
-    </div>
+    </ReactFocusLock>
   );
 };
