@@ -1,4 +1,5 @@
 import { NavBar } from '@app-header/components/NavBar';
+import { IconClose } from '@app-ui/IconClose';
 import { Logo } from '@app-ui/Logo';
 
 export const Header = () => {
@@ -68,13 +69,7 @@ export const Header = () => {
             className="form-search__reset"
             type="reset"
           >
-            <svg
-              width="10"
-              height="10"
-              aria-hidden="true"
-            >
-              <use xlinkHref="#icon-close"></use>
-            </svg>
+            <IconClose />
             <span className="visually-hidden">Сбросить поиск</span>
           </button>
         </div>

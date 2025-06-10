@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import { StarsComponent } from '@app-ui/StarsComponent/StarsComponent';
+
 import { routeConfig } from '@app/AppRouter/routeConfig';
 
 import { CardItemProps } from '@main-page/types/types';
@@ -35,41 +37,7 @@ export const CardItem = ({ props, onActiveCardHandler, setModalState }: CardItem
       </div>
       <div className="product-card__info">
         <div className="rate product-card__rate">
-          <svg
-            width="17"
-            height="16"
-            aria-hidden="true"
-          >
-            <use xlinkHref="#icon-full-star"></use>
-          </svg>
-          <svg
-            width="17"
-            height="16"
-            aria-hidden="true"
-          >
-            <use xlinkHref="#icon-full-star"></use>
-          </svg>
-          <svg
-            width="17"
-            height="16"
-            aria-hidden="true"
-          >
-            <use xlinkHref="#icon-full-star"></use>
-          </svg>
-          <svg
-            width="17"
-            height="16"
-            aria-hidden="true"
-          >
-            <use xlinkHref="#icon-star"></use>
-          </svg>
-          <svg
-            width="17"
-            height="16"
-            aria-hidden="true"
-          >
-            <use xlinkHref="#icon-star"></use>
-          </svg>
+          <StarsComponent rating={rating} />
           <p className="visually-hidden">Рейтинг: {rating}</p>
           <p className="rate__count">
             <span className="visually-hidden">Всего оценок:</span>

@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+import { IconAddBasket } from '@app-ui/IconAddBasket';
+import { StarsComponent } from '@app-ui/StarsComponent/StarsComponent';
+
 import { CameraSpecs } from '@product-page/components/Product/components/CameraSpecs';
 import { TabsButton } from '@product-page/components/Product/components/TabsButton';
 import { ProductPageProps, ProductTabs } from '@product-page/types/types';
@@ -49,41 +52,7 @@ export const Product = ({ props }: ProductPageProps) => {
           <div className="product__content">
             <h1 className="title title--h3">{name}</h1>
             <div className="rate product__rate">
-              <svg
-                width="17"
-                height="16"
-                aria-hidden="true"
-              >
-                <use xlinkHref="#icon-full-star"></use>
-              </svg>
-              <svg
-                width="17"
-                height="16"
-                aria-hidden="true"
-              >
-                <use xlinkHref="#icon-full-star"></use>
-              </svg>
-              <svg
-                width="17"
-                height="16"
-                aria-hidden="true"
-              >
-                <use xlinkHref="#icon-full-star"></use>
-              </svg>
-              <svg
-                width="17"
-                height="16"
-                aria-hidden="true"
-              >
-                <use xlinkHref="#icon-full-star"></use>
-              </svg>
-              <svg
-                width="17"
-                height="16"
-                aria-hidden="true"
-              >
-                <use xlinkHref="#icon-star"></use>
-              </svg>
+              <StarsComponent rating={rating} />
               <p className="visually-hidden">Рейтинг: {rating}</p>
               <p className="rate__count">
                 <span className="visually-hidden">Всего оценок:</span>
@@ -98,13 +67,7 @@ export const Product = ({ props }: ProductPageProps) => {
               className="btn btn--purple"
               type="button"
             >
-              <svg
-                width="24"
-                height="16"
-                aria-hidden="true"
-              >
-                <use xlinkHref="#icon-add-basket"></use>
-              </svg>
+              <IconAddBasket />
               Добавить в корзину
             </button>
             <div className="tabs product__tabs">

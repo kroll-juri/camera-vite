@@ -1,4 +1,7 @@
 import { modalController } from '@components/blocks/ModalComponent/helpers';
+import { IconAddBasket } from '@app-ui/IconAddBasket';
+import { IconClose } from '@app-ui/IconClose';
+import { IconSnowFlake } from '@app-ui/IconSnowFlake';
 
 import { changeCameraCategoryAdapter } from '@utils/changeCameraCategoryAdapter';
 
@@ -51,13 +54,7 @@ export const CatalogCallItem = ({ props, setModalState }: CatalogCallItemProps) 
         <label>
           <span className="custom-input__label">
             Телефон
-            <svg
-              width="9"
-              height="9"
-              aria-hidden="true"
-            >
-              <use xlinkHref="#icon-snowflake" />
-            </svg>
+            <IconSnowFlake />
           </span>
           <input
             type="tel"
@@ -73,13 +70,7 @@ export const CatalogCallItem = ({ props, setModalState }: CatalogCallItemProps) 
           className="btn btn--purple modal__btn modal__btn--fit-width"
           type="button"
         >
-          <svg
-            width="24"
-            height="16"
-            aria-hidden="true"
-          >
-            <use xlinkHref="#icon-add-basket" />
-          </svg>
+          <IconAddBasket />
           Заказать
         </button>
       </div>
@@ -89,13 +80,7 @@ export const CatalogCallItem = ({ props, setModalState }: CatalogCallItemProps) 
         aria-label="Закрыть попап"
         onClick={() => modalController.handleChangeModalState(setModalState, false)}
       >
-        <svg
-          width="10"
-          height="10"
-          aria-hidden="true"
-        >
-          <use xlinkHref="#icon-close" />
-        </svg>
+        <IconClose />
       </button>
     </>
   );

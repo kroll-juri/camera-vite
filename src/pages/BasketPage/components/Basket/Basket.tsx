@@ -1,3 +1,5 @@
+import { IconClose } from '@app-ui/IconClose';
+
 export const Basket = () => {
   return (
     <section className="basket">
@@ -80,13 +82,7 @@ export const Basket = () => {
               type="button"
               aria-label="Удалить товар"
             >
-              <svg
-                width="10"
-                height="10"
-                aria-hidden="true"
-              >
-                <use xlinkHref="#icon-close"></use>
-              </svg>
+              <IconClose />
             </button>
           </li>
           <li className="basket-item">
@@ -166,13 +162,7 @@ export const Basket = () => {
               type="button"
               aria-label="Удалить товар"
             >
-              <svg
-                width="10"
-                height="10"
-                aria-hidden="true"
-              >
-                <use xlinkHref="#icon-close"></use>
-              </svg>
+              <IconClose />
             </button>
           </li>
         </ul>
