@@ -1,5 +1,6 @@
-import { ChangeEvent, useEffect,useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 
+import { phoneNumberFormatAdapter } from '@utils/phoneNumberFormatAdapter';
 import { validatePhoneNumber } from '@utils/validatePhoneNumber';
 
 export const usePhoneInput = () => {
@@ -15,8 +16,10 @@ export const usePhoneInput = () => {
     setInputValue(event.target.value);
   };
 
+  const formattedPhoneNumber = phoneNumberFormatAdapter(inputValue);
+
   const handleClickSubmit = () => {
-    console.log('Отправленные данные:', inputValue);
+    console.log('Отправленные данные:', formattedPhoneNumber);
     setInputValue('');
   };
 
