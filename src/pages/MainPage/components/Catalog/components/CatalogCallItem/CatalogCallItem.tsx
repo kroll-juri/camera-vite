@@ -1,10 +1,9 @@
 import { modalController } from '@components/blocks/ModalComponent/helpers';
-import { IconAddBasket } from '@app-ui/IconAddBasket';
 import { IconClose } from '@app-ui/IconClose';
-import { IconSnowFlake } from '@app-ui/IconSnowFlake';
 
 import { changeCameraCategoryAdapter } from '@utils/changeCameraCategoryAdapter';
 
+import { PhoneItem } from '@main-page/components/Catalog/components/CatalogCallItem/components/PhoneItem';
 import { CatalogCallItemProps } from '@main-page/types/types';
 
 export const CatalogCallItem = ({ props, setModalState }: CatalogCallItemProps) => {
@@ -50,30 +49,7 @@ export const CatalogCallItem = ({ props, setModalState }: CatalogCallItemProps) 
           </p>
         </div>
       </div>
-      <div className="custom-input form-review__item">
-        <label>
-          <span className="custom-input__label">
-            Телефон
-            <IconSnowFlake />
-          </span>
-          <input
-            type="tel"
-            name="user-tel"
-            placeholder="Введите ваш номер"
-            required
-          />
-        </label>
-        <p className="custom-input__error">Нужно указать номер</p>
-      </div>
-      <div className="modal__buttons">
-        <button
-          className="btn btn--purple modal__btn modal__btn--fit-width"
-          type="button"
-        >
-          <IconAddBasket />
-          Заказать
-        </button>
-      </div>
+      <PhoneItem />
       <button
         className="cross-btn"
         type="button"

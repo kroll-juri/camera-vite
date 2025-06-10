@@ -1,3 +1,3 @@
-import { IconStar } from '@app-ui/IconStar/IconFullStar';
+import { IconStar } from '@app-ui/IconStar/IconStar';
 
 export { IconStar };
