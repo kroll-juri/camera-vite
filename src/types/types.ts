@@ -1,4 +1,4 @@
-import { Dispatch,SetStateAction } from 'react';
+import { Dispatch, ReactNode,SetStateAction } from 'react';
 
 import { store } from '@app/store';
 
@@ -12,3 +12,7 @@ export interface OrderType {
 }
 
 export type SetState<T> = Dispatch<SetStateAction<T>>;
+
+export interface ChildrenProps {
+  children: ReactNode;
+}

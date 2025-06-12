@@ -28,6 +28,8 @@ export const CardList = () => {
             key={item.id}
             onActiveCardHandler={handleActiveCard}
             setModalState={setModalState}
+            className={''}
+            urlModifier={''}
           />
         ))}
       {activeCard && (

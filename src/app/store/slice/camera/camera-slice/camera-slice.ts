@@ -1,4 +1,4 @@
-import { fetchCameraListData, fetchCurrentCamera } from '@store/api-action/api-action';
+import { fetchCameraListData, fetchCurrentCamera, fetchSimilarListData } from '@store/api-action/api-action';
 import { Camera, CameraInitialState } from '@slice/camera/types/types';
 
 import { Namespace } from '@app/store/namespace/namespace';
@@ -11,6 +11,8 @@ const initialState: CameraInitialState = {
   currentCamera: null,
   isCurrentCameraLoading: false,
   actualCamera: [],
+  similarList: [],
+  isSimilarListLoading: false,
 };
 
 const cameraSlice = createSlice({
@@ -43,6 +45,16 @@ const cameraSlice = createSlice({
       })
       .addCase(fetchCurrentCamera.rejected, (state) => {
         state.isCurrentCameraLoading = false;
+      })
+      .addCase(fetchSimilarListData.pending, (state) => {
+        state.isSimilarListLoading = true;
+      })
+      .addCase(fetchSimilarListData.fulfilled, (state, action) => {
+        state.similarList = action.payload;
+        state.isSimilarListLoading = false;
+      })
+      .addCase(fetchSimilarListData.rejected, (state) => {
+        state.isSimilarListLoading = false;
       });
   },
 });

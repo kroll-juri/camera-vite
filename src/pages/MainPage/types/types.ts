@@ -9,4 +9,6 @@ export interface CatalogCallItemProps {
 
 export interface CardItemProps extends CatalogCallItemProps {
   onActiveCardHandler: (id: number) => void;
+  className: string;
+  urlModifier: string;
 }

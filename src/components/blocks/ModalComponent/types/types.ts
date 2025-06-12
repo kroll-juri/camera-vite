@@ -1,9 +1,6 @@
-import { ReactNode } from 'react';
+import { ChildrenProps, SetState } from '@shared-types/types';
 
-import { SetState } from '@shared-types/types';
-
-export interface ModalComponentProps {
-  children: ReactNode;
+export interface ModalComponentProps extends ChildrenProps {
   className: string;
   isActive: boolean;
   setModalState: SetState<boolean>;

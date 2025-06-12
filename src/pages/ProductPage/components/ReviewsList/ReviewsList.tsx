@@ -19,7 +19,7 @@ export const ReviewsList = ({ reviewsList }: ReviewListProps) => {
     reviewsList && getSortedList(reviewsList, (a, b) => dayjs(b.createAt).unix() - dayjs(a.createAt).unix());
 
   return (
-    <div className="page-content__section">
+    <>
       <section className="review-block">
         <div className="container">
           <div className="page-content__headed">
@@ -47,6 +47,6 @@ export const ReviewsList = ({ reviewsList }: ReviewListProps) => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };

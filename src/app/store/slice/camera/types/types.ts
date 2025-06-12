@@ -16,7 +16,6 @@ export enum CameraLevel {
   Professional = 'Профессиональный',
 }
 
-
 export interface Camera {
   id: number;
   name: string;
@@ -40,4 +39,6 @@ export interface CameraInitialState {
   currentCamera: Camera | null;
   isCurrentCameraLoading: boolean;
   actualCamera: Camera[];
+  similarList: Camera[];
+  isSimilarListLoading: boolean;
 }

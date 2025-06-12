@@ -31,7 +31,7 @@ export const Product = ({ props }: ProductPageProps) => {
   };
 
   return (
-    <div className="page-content__section">
+    <>
       <section className="product">
         <div className="container">
           <div className="product__img">
@@ -97,6 +97,6 @@ export const Product = ({ props }: ProductPageProps) => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };

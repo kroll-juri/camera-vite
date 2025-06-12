@@ -2,11 +2,12 @@ import { Link } from 'react-router-dom';
 
 import { StarsComponent } from '@app-ui/StarsComponent/StarsComponent';
 
+import { getModifiedImages } from '@utils/functions/getModifiedImages';
 import { routeConfig } from '@app/AppRouter/routeConfig';
 
 import { CardItemProps } from '@main-page/types/types';
 
-export const CardItem = ({ props, onActiveCardHandler, setModalState }: CardItemProps) => {
+export const CardItem = ({ props, onActiveCardHandler, setModalState, className, urlModifier }: CardItemProps) => {
   const {
     name,
     price,
@@ -18,17 +19,23 @@ export const CardItem = ({ props, onActiveCardHandler, setModalState }: CardItem
     reviewCount,
     id: cameraId,
   } = props;
+
+  const [img, img2x, imgWebp, imgWebp2x] = getModifiedImages(
+    [previewImg, previewImg2x, previewImgWebp, previewImgWebp2x],
+    urlModifier,
+  );
+
   return (
-    <div className="product-card">
+    <div className={`product-card ${className}`}>
       <div className="product-card__img">
         <picture>
           <source
             type="image/webp"
-            srcSet={`${previewImgWebp}, ${previewImgWebp2x}`}
+            srcSet={`${imgWebp}, ${imgWebp2x}`}
           />
           <img
-            src={previewImg}
-            srcSet={previewImg2x}
+            src={img}
+            srcSet={img2x}
             width="280"
             height="240"
             alt={name}

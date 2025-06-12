@@ -10,18 +10,15 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const api = createAPI();
 
-const fetchCameraListData = createAsyncThunk<Camera[], undefined>(
-  'camera/fetchCameraListData',
-  async (): Promise<Camera[]> => {
-    try {
-      const { data } = await api.get<Camera[]>(apiRouteConfig.CamerasApiRoute);
-      return data;
-    } catch (error) {
-      toast.warn('Error fetching cameras');
-      throw error;
-    }
-  },
-);
+const fetchCameraListData = createAsyncThunk<Camera[]>('camera/fetchCameraListData', async (): Promise<Camera[]> => {
+  try {
+    const { data } = await api.get<Camera[]>(apiRouteConfig.CamerasApiRoute);
+    return data;
+  } catch (error) {
+    toast.warn('Error fetching cameras');
+    throw error;
+  }
+});
 
 const fetchCurrentCamera = createAsyncThunk<Camera | null, string>(
   'camera/fetchCurrentCamera',
@@ -36,15 +33,31 @@ const fetchCurrentCamera = createAsyncThunk<Camera | null, string>(
   },
 );
 
-export const fetchReviewData = createAsyncThunk<Review[] | undefined, string>(
+export const fetchReviewData = createAsyncThunk<Review[], string>(
   'review/fetchReviewData',
-  async (cameraId: string): Promise<Review[] | undefined> => {
+  async (cameraId: string): Promise<Review[]> => {
     try {
       const { data } = await api.get<Review[]>(`${apiRouteConfig.CamerasApiRoute}/${cameraId}/reviews`);
       return data;
     } catch (error) {
       toast.warn('Error fetching review data');
     }
+
+    return [];
+  },
+);
+
+export const fetchSimilarListData = createAsyncThunk<Camera[], string>(
+  'review/fetchReviewData',
+  async (cameraId: string): Promise<Camera[]> => {
+    try {
+      const { data } = await api.get<Camera[]>(`${apiRouteConfig.CamerasApiRoute}/${cameraId}/similar`);
+      return data;
+    } catch (error) {
+      toast.warn('Error fetching similar cameras data');
+    }
+
+    return [];
   },
 );
 //

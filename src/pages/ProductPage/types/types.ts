@@ -29,8 +29,6 @@ export interface ReviewItemProps {
 
 export type ReviewsCardListProps = Pick<Review, 'advantage' | 'disadvantage' | 'review'>;
 
-export enum ReviewCardListTitles {
-  advantage = 'Достоинства',
-  disadvantage = 'Недостатки',
-  review = 'Отзыв',
+export interface SimilarListProps {
+  similarList: Camera[];
 }
