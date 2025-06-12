@@ -1,7 +1,7 @@
 import { modalController } from '@components/blocks/ModalComponent/helpers';
 import { IconClose } from '@app-ui/IconClose';
 
-import { changeCameraCategoryAdapter } from '@utils/changeCameraCategoryAdapter';
+import { changeCameraCategoryAdapter } from '@utils/functions/changeCameraCategoryAdapter';
 
 import { PhoneItem } from '@main-page/components/Catalog/components/CatalogCallItem/components/PhoneItem';
 import { CatalogCallItemProps } from '@main-page/types/types';

@@ -1,3 +1,5 @@
+import { RefObject } from 'react';
+
 export enum NavItemTitles {
   catalog = 'Каталог',
   guarantee = 'Гарантии',
@@ -7,4 +9,8 @@ export enum NavItemTitles {
 
 export interface NavItemProps {
   title: NavItemTitles;
+}
+
+export interface HeaderProps {
+  childRef: RefObject<HTMLAnchorElement | null>;
 }

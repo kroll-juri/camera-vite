@@ -1,7 +1,7 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 
-import { phoneNumberFormatAdapter } from '@utils/phoneNumberFormatAdapter';
-import { validatePhoneNumber } from '@utils/validatePhoneNumber';
+import { phoneNumberFormatAdapter } from '@utils/functions/phoneNumberFormatAdapter';
+import { validatePhoneNumber } from '@utils/functions/validatePhoneNumber';
 
 export const usePhoneInput = () => {
   const [inputValue, setInputValue] = useState('');

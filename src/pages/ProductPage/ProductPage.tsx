@@ -6,8 +6,9 @@ import { BreadCrumbs } from '@components/blocks/BreadCrumbs';
 
 import { useAppSelector } from '@hooks/useAppSelector';
 
-import { fetchCurrentCamera } from '@store/api-action/api-action';
+import { fetchCurrentCamera, fetchReviewData } from '@store/api-action/api-action';
 import { getCurrentCamera } from '@slice/camera/camera-selectors/camera-selectors';
+import { getReviewList } from '@slice/review/review-selectors/review-selectors';
 
 import { routeConfig } from '@app/AppRouter/routeConfig';
 import { store } from '@app/store';
@@ -19,10 +20,12 @@ export const ProductPage = () => {
   const { id: cameraId } = useParams();
   const navigate = useNavigate();
   const currentCamera = useAppSelector(getCurrentCamera);
+  const currentReviewList = useAppSelector(getReviewList);
 
   useEffect(() => {
     if (cameraId) {
       store.dispatch(fetchCurrentCamera(cameraId));
+      store.dispatch(fetchReviewData(cameraId));
     } else {
       navigate(routeConfig.NotFound);
     }
@@ -32,7 +35,7 @@ export const ProductPage = () => {
     <div className="page-content">
       <BreadCrumbs />
       {currentCamera && <Product props={{ ...currentCamera }} />}
-      <ReviewsList />
+      {currentReviewList && <ReviewsList reviewsList={currentReviewList} />}
     </div>
   );
 };

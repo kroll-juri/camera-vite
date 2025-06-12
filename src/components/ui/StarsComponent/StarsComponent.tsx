@@ -2,7 +2,7 @@ import { IconStar } from '@app-ui/IconStar';
 import { XlinkHref } from '@app-ui/IconStar/types/types';
 import { StarsComponentProps } from '@app-ui/StarsComponent/types/types';
 
-import { MAX_STARS_COUNT } from '@utils/const';
+import { MAX_STARS_COUNT } from '@utils/const/const';
 
 export const StarsComponent = ({ rating }: StarsComponentProps) => {
   return (

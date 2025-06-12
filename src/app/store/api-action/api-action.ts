@@ -1,6 +1,7 @@
 import { toast } from 'react-toastify';
 
 import { Camera } from '@slice/camera/types/types';
+import { Review } from '@slice/review/types/types';
 
 import { createAPI } from '@service/api/api';
 import { apiRouteConfig } from '@api/api-routes';
@@ -35,17 +36,17 @@ const fetchCurrentCamera = createAsyncThunk<Camera | null, string>(
   },
 );
 
-// export const fetchReviewData = createAsyncThunk<ReviewType[] | undefined, string>(
-//   'review/fetchReviewData',
-//   async (cameraId: string): Promise<ReviewType[] | undefined> => {
-//     const {data} = await api.get<ReviewType[]>(`${apiRouteConfig.CamerasApiRoute}/${cameraId}/reviews`);
-//     try {
-//       return data;
-//     } catch(error) {
-//       toast.warn('Error fetching review data');
-//     }
-//   }
-// );
+export const fetchReviewData = createAsyncThunk<Review[] | undefined, string>(
+  'review/fetchReviewData',
+  async (cameraId: string): Promise<Review[] | undefined> => {
+    try {
+      const { data } = await api.get<Review[]>(`${apiRouteConfig.CamerasApiRoute}/${cameraId}/reviews`);
+      return data;
+    } catch (error) {
+      toast.warn('Error fetching review data');
+    }
+  },
+);
 //
 // export const postOrderAction = createAsyncThunk<void, OrderType>(
 //   'order/postOrder',

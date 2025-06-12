@@ -1,12 +1,14 @@
 import { NavBar } from '@app-header/components/NavBar';
+import { HeaderProps } from '@app-header/types/types';
 import { IconClose } from '@app-ui/IconClose';
 import { Logo } from '@app-ui/Logo';
 
-export const Header = () => {
+export const Header = ({ childRef }: HeaderProps) => {
   return (
     <header
       className="header"
       id="header"
+      ref={childRef}
     >
       <div className="container">
         <Logo
