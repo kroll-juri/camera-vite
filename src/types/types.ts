@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode,SetStateAction } from 'react';
+import { Dispatch, ReactNode, SetStateAction } from 'react';
 
 import { store } from '@app/store';
 
@@ -15,4 +15,9 @@ export type SetState<T> = Dispatch<SetStateAction<T>>;
 
 export interface ChildrenProps {
   children: ReactNode;
+}
+
+export interface SliderState {
+  start: number;
+  end: number;
 }

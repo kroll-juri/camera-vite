@@ -1,8 +1,7 @@
 import { ModalComponent } from '@components/blocks/ModalComponent';
 
 import { useActiveCard } from '@hooks/useActiveCard';
-
-import { CARDS_COUNT_SIMILAR_SLIDER } from '@utils/const/const';
+import { useSlider } from '@hooks/useSlider';
 
 import { CardItem } from '@main-page/components/Catalog/components/CardList/components/CardItem';
 import { CatalogCallItem } from '@main-page/components/Catalog/components/CatalogCallItem';
@@ -10,6 +9,8 @@ import { SimilarListProps } from '@product-page/types/types';
 
 export const SimilarList = ({ similarList }: SimilarListProps) => {
   const { handleActiveCard, activeCard, modalState, setModalState } = useActiveCard(similarList);
+
+  const { disabled, handleIncreaseClick, handleDecreaseClick, showCardsCount } = useSlider(similarList);
 
   return (
     <section className="product-similar">
@@ -29,7 +30,7 @@ export const SimilarList = ({ similarList }: SimilarListProps) => {
                     urlModifier={'/public'}
                   />
                 ))
-                .slice(0, CARDS_COUNT_SIMILAR_SLIDER)}
+                .slice(showCardsCount.start, showCardsCount.end)}
             {activeCard && (
               <ModalComponent
                 className={''}
@@ -46,8 +47,9 @@ export const SimilarList = ({ similarList }: SimilarListProps) => {
           <button
             aria-label="Предыдущий слайд"
             className="slider-controls slider-controls--prev"
-            disabled
+            disabled={disabled.prevDisabled}
             type="button"
+            onClick={handleDecreaseClick}
           >
             <svg
               aria-hidden="true"
@@ -61,6 +63,8 @@ export const SimilarList = ({ similarList }: SimilarListProps) => {
             aria-label="Следующий слайд"
             className="slider-controls slider-controls--next"
             type="button"
+            disabled={disabled.nextDisabled}
+            onClick={handleIncreaseClick}
           >
             <svg
               aria-hidden="true"

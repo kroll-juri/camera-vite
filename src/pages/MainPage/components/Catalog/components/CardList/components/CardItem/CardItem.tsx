@@ -25,8 +25,6 @@ export const CardItem = ({ props, onActiveCardHandler, setModalState, className,
     urlModifier,
   );
 
-  console.log(cameraId);
-
   return (
     <div className={`product-card ${className}`}>
       <div className="product-card__img">
