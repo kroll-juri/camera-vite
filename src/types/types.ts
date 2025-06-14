@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction } from 'react';
+import { ChangeEvent,Dispatch, ReactNode, SetStateAction } from 'react';
 
 import { store } from '@app/store';
 
@@ -21,3 +21,5 @@ export interface SliderState {
   start: number;
   end: number;
 }
+
+export type EventHandler = (evt: ChangeEvent<HTMLInputElement>) => void;

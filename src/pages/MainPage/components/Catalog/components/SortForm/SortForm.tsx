@@ -1,4 +1,6 @@
-export const SortForm = () => {
+import { SortFormProps } from '@main-page/types/types';
+
+export const SortForm = ({ handleTypeChange, handleOrderChange, sortParams }: SortFormProps) => {
   return (
     <div className="catalog-sort">
       <form action="#">
@@ -10,7 +12,8 @@ export const SortForm = () => {
                 type="radio"
                 id="sortPrice"
                 name="sort"
-                checked
+                checked={sortParams.type === 'price'}
+                onChange={() => handleTypeChange('price')}
               />
               <label htmlFor="sortPrice">по цене</label>
             </div>
@@ -19,6 +22,8 @@ export const SortForm = () => {
                 type="radio"
                 id="sortPopular"
                 name="sort"
+                checked={sortParams.type === 'popularity'}
+                onChange={() => handleTypeChange('popularity')}
               />
               <label htmlFor="sortPopular">по популярности</label>
             </div>
@@ -29,7 +34,8 @@ export const SortForm = () => {
                 type="radio"
                 id="up"
                 name="sort-icon"
-                checked
+                checked={sortParams.order === 'increase'}
+                onChange={() => handleOrderChange('increase')}
                 aria-label="По возрастанию"
               />
               <label htmlFor="up">
@@ -48,6 +54,8 @@ export const SortForm = () => {
                 id="down"
                 name="sort-icon"
                 aria-label="По убыванию"
+                checked={sortParams.order === 'decrease'}
+                onChange={() => handleOrderChange('decrease')}
               />
               <label htmlFor="down">
                 <svg
