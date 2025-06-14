@@ -1,8 +1,8 @@
 class RouteConfig {
   #index = '/';
-  #basket = 'basket';
-  #camera = 'camera';
-  #product = 'camera/:id';
+  #basket = '/basket';
+  #camera = '/camera';
+  #product = '/camera/:id';
   #notFound = '*';
 
   get Index() {

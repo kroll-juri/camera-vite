@@ -48,7 +48,7 @@ export const fetchReviewData = createAsyncThunk<Review[], string>(
 );
 
 export const fetchSimilarListData = createAsyncThunk<Camera[], string>(
-  'review/fetchReviewData',
+  'review/fetchSimilarListData',
   async (cameraId: string): Promise<Camera[]> => {
     try {
       const { data } = await api.get<Camera[]>(`${apiRouteConfig.CamerasApiRoute}/${cameraId}/similar`);

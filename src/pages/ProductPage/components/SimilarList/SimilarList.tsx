@@ -22,7 +22,7 @@ export const SimilarList = ({ similarList }: SimilarListProps) => {
                 .map((item) => (
                   <CardItem
                     onActiveCardHandler={handleActiveCard}
-                    props={{ ...item }}
+                    props={item}
                     setModalState={setModalState}
                     key={item.id}
                     className={'is-active'}
