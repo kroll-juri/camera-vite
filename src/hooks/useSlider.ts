@@ -12,8 +12,6 @@ const initialState: SliderState = {
 export const useSlider = <T>(list: T[]) => {
   const [showCardsCount, setShowCardsCount] = useState<SliderState>(initialState);
 
-  console.log(showCardsCount);
-
   const handleIncreaseClick = () => {
     setShowCardsCount((prevState) => ({
       ...prevState,

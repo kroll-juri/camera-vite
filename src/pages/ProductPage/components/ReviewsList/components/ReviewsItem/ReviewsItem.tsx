@@ -2,19 +2,15 @@ import dayjs from 'dayjs';
 
 import { StarsComponent } from '@app-ui/StarsComponent/StarsComponent';
 
-import 'dayjs/locale/ru.js';
 import { ReviewsCardList } from '@product-page/components/ReviewsList/components/ReviewsItem/components/ReviewsCardList';
 import { ReviewItemProps } from '@product-page/types/types';
 
-dayjs.locale('ru');
-
 export const ReviewsItem = ({ props }: ReviewItemProps) => {
   const { rating, review, createAt, userName, disadvantage, advantage } = props;
-
   const dateOfReview = dayjs(createAt).format('DD/MM/YYYY');
 
   return (
-    <li className="review-card">
+    <div className="review-card">
       <div className="review-card__head">
         <p className="title title--h4">{userName}</p>
         <time
@@ -33,6 +29,6 @@ export const ReviewsItem = ({ props }: ReviewItemProps) => {
         advantage={advantage}
         disadvantage={disadvantage}
       />
-    </li>
+    </div>
   );
 };

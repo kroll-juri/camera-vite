@@ -24,7 +24,7 @@ export const CardList = () => {
       {cardListData &&
         cardListData.map((item) => (
           <CardItem
-            props={{ ...item }}
+            props={item}
             key={item.id}
             onActiveCardHandler={handleActiveCard}
             setModalState={setModalState}

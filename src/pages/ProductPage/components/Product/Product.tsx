@@ -7,7 +7,7 @@ import { CameraSpecs } from '@product-page/components/Product/components/CameraS
 import { TabsButton } from '@product-page/components/Product/components/TabsButton';
 import { ProductPageProps, ProductTabs } from '@product-page/types/types';
 
-export const Product = ({ props }: ProductPageProps) => {
+export const Product = ({ props: currentCamera }: ProductPageProps) => {
   const {
     name,
     previewImg,
@@ -22,7 +22,7 @@ export const Product = ({ props }: ProductPageProps) => {
     level,
     category,
     vendorCode,
-  } = props;
+  } = currentCamera;
 
   const [activeTab, setActiveTab] = useState<ProductTabs>('description');
 

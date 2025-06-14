@@ -20,7 +20,7 @@ export interface TabsButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>
 export type ProductTabs = 'characteristics' | 'description';
 
 export interface ReviewListProps {
-  reviewsList: Review[];
+  props: Review[];
 }
 
 export interface ReviewItemProps {
@@ -30,5 +30,5 @@ export interface ReviewItemProps {
 export type ReviewsCardListProps = Pick<Review, 'advantage' | 'disadvantage' | 'review'>;
 
 export interface SimilarListProps {
-  similarList: Camera[];
+  props: Camera[];
 }

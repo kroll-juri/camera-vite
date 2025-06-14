@@ -7,7 +7,7 @@ import { CardItem } from '@main-page/components/Catalog/components/CardList/comp
 import { CatalogCallItem } from '@main-page/components/Catalog/components/CatalogCallItem';
 import { SimilarListProps } from '@product-page/types/types';
 
-export const SimilarList = ({ similarList }: SimilarListProps) => {
+export const SimilarList = ({ props: similarList }: SimilarListProps) => {
   const { handleActiveCard, activeCard, modalState, setModalState } = useActiveCard(similarList);
 
   const { disabled, handleIncreaseClick, handleDecreaseClick, showCardsCount } = useSlider(similarList);

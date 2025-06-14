@@ -40,17 +40,17 @@ export const ProductPage = () => {
       <BreadCrumbs />
       {currentCamera && (
         <PageContent>
-          <Product props={{ ...currentCamera }} />
+          <Product props={currentCamera} />
         </PageContent>
       )}
       {currentCamera && (
         <PageContent>
-          <SimilarList similarList={similarList} />
+          <SimilarList props={similarList} />
         </PageContent>
       )}
       {currentReviewList && (
         <PageContent>
-          <ReviewsList reviewsList={currentReviewList} />
+          <ReviewsList props={currentReviewList} />
         </PageContent>
       )}
     </div>
