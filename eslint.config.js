@@ -47,7 +47,7 @@ export default defineConfig([
 
             // 3. Компоненты (все алиасы на компоненты и layout)
             [
-              '^@components/',
+              '^@SearchFormItem/',
               '^@layout/',
               '^@app-layout/',
               '^@app-header/',

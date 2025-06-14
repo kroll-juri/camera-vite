@@ -14,3 +14,8 @@ export interface NavItemProps {
 export interface HeaderProps {
   childRef: RefObject<HTMLAnchorElement | null>;
 }
+
+export interface SearchFormItemProps {
+  value: string;
+  id: number;
+}
