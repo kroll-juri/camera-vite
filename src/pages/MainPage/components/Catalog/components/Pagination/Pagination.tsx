@@ -1,36 +1,59 @@
-import { Link } from 'react-router-dom';
+import { useMemo } from 'react';
 
-import { routeConfig } from '@app/AppRouter/routeConfig';
+import { PaginationItem } from './components/PaginationItem';
 
-import { PaginationItem } from '@main-page/components/Catalog/components/Pagination/components';
 import { PaginationListProps } from '@main-page/types/types';
 
-export const Pagination = ({ maxAmount, page, onClickHandler }: PaginationListProps) => {
-  const maxAmountArray: number[] = Array.from({ length: maxAmount });
+export const Pagination = ({
+  maxAmount,
+  page,
+  onClickHandler,
+  handleNextRange,
+  handlePrevRange,
+  rangeStart,
+}: PaginationListProps) => {
+  const pagesToShow = useMemo(() => {
+    return Array.from({ length: 3 }, (_, i) => rangeStart + i).filter((p) => p <= maxAmount);
+  }, [rangeStart, maxAmount]);
+
+  const showNext = rangeStart + 3 <= maxAmount;
+  const showPrev = rangeStart > 1;
 
   return (
     <div className="pagination">
       <ul className="pagination__list">
-        {maxAmountArray.map((_, index) => {
-          const pageNumber = index + 1;
+        {showPrev && (
+          <li className="pagination__item">
+            <button
+              className="pagination__link pagination__link--text"
+              onClick={handlePrevRange}
+              disabled={!showPrev}
+            >
+              Назад
+            </button>
+          </li>
+        )}
 
-          return (
-            <PaginationItem
-              value={pageNumber}
-              key={index}
-              isActive={page === pageNumber}
-              onClickHandler={onClickHandler}
-            />
-          );
-        })}
-        <li className="pagination__item">
-          <Link
-            className="pagination__link pagination__link--text"
-            to={routeConfig.Index}
-          >
-            Далее
-          </Link>
-        </li>
+        {pagesToShow.map((num) => (
+          <PaginationItem
+            key={num}
+            value={num}
+            isActive={page === num}
+            onClickHandler={onClickHandler}
+          />
+        ))}
+
+        {showNext && (
+          <li className="pagination__item">
+            <button
+              className="pagination__link pagination__link--text"
+              onClick={handleNextRange}
+              disabled={!showNext}
+            >
+              Далее
+            </button>
+          </li>
+        )}
       </ul>
     </div>
   );

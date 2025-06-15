@@ -81,6 +81,9 @@ interface PaginationProps {
 export interface PaginationListProps extends PaginationProps {
   maxAmount: number;
   page: number;
+  handleNextRange: () => void;
+  handlePrevRange: () => void;
+  rangeStart: number;
 }
 
 export interface PaginationItemProps extends PaginationProps {

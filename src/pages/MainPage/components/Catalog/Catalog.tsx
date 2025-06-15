@@ -22,18 +22,18 @@ export const Catalog = () => {
   const camerasList = useAppSelector(getCamerasList);
   const { handleTypeChange, handleOrderChange, sortParams, sortedCamerasList } = useSorting(camerasList);
   const { filter, setFilter, handleFilterInputChange, handleFilterResetChange } = useFilter();
-  const { page, sliceShowInitialRange, handleShowNewCardsClick } = usePagination();
 
   const sortedAndFilteredCamerasList = getFilteredList(sortedCamerasList, filter);
-
-  const showedCamerasList = sortedAndFilteredCamerasList.slice(
-    sliceShowInitialRange.showMin,
-    sliceShowInitialRange.showMax,
-  );
 
   const isShowPagination = sortedAndFilteredCamerasList.length >= MAX_AMOUNT_SHOWED_CARDS;
 
   const maxAmountPages = Math.ceil(sortedAndFilteredCamerasList.length / MAX_AMOUNT_SHOWED_CARDS);
+  const { page, sliceShowInitialRange, handlePageClick, handleNextRange, handlePrevRange, rangeStart } =
+    usePagination(maxAmountPages);
+  const showedCamerasList = sortedAndFilteredCamerasList.slice(
+    sliceShowInitialRange.showMin,
+    sliceShowInitialRange.showMax,
+  );
 
   useEffect(() => {
     dispatch(setActualCamera(sortedAndFilteredCamerasList));
@@ -61,7 +61,10 @@ export const Catalog = () => {
               <Pagination
                 maxAmount={maxAmountPages}
                 page={page}
-                onClickHandler={handleShowNewCardsClick}
+                onClickHandler={handlePageClick}
+                handleNextRange={handleNextRange}
+                handlePrevRange={handlePrevRange}
+                rangeStart={rangeStart}
               />
             )}
           </div>
