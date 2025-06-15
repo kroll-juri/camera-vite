@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useEffect,useState } from 'react';
+
+import { useSearchParams } from 'react-router-dom';
 
 import { IconAddBasket } from '@app-ui/IconAddBasket';
 import { StarsComponent } from '@app-ui/StarsComponent/StarsComponent';
@@ -24,10 +26,20 @@ export const Product = ({ props: currentCamera }: ProductPageProps) => {
     vendorCode,
   } = currentCamera;
 
-  const [activeTab, setActiveTab] = useState<ProductTabs>('description');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const tabParam = searchParams.get('tab') as ProductTabs | null;
+  const defaultTab: ProductTabs = 'description';
+  const [activeTab, setActiveTab] = useState<ProductTabs>(tabParam || defaultTab);
+
+  useEffect(() => {
+    if (tabParam && tabParam !== activeTab) {
+      setActiveTab(tabParam);
+    }
+  }, [tabParam]);
 
   const handleTabsButtonClick = (tab: ProductTabs) => {
     setActiveTab(tab);
+    setSearchParams({ tab });
   };
 
   return (

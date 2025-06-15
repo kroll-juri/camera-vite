@@ -1,44 +1,40 @@
-import { useState } from 'react';
+import { useMemo } from 'react';
+
+import { useSearchParams } from 'react-router-dom';
 
 import { Camera } from '@slice/camera/types/types';
 
-import { SortOrder, SortType } from '@main-page/components/Catalog/components/SortForm/types/types';
-import { SortParams } from '@main-page/types/types';
-
 export const useSorting = <T extends Camera>(list: T[]) => {
-  const initialState: SortParams = {
-    type: 'price',
-    order: 'increase',
-  };
-  const [sortParams, setSortParams] = useState<SortParams>(initialState);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const sortBy = searchParams.get('sort') || 'price';
+  const order = searchParams.get('order') || 'asc';
 
-  const sortedCamerasList = [...list].sort((a, b) => {
-    const modifier = sortParams.order === 'increase' ? 1 : -1;
+  const sortedList = useMemo(
+    () =>
+      [...list].sort((a, b) => {
+        const aVal = sortBy === 'price' ? a.price : a.rating;
+        const bVal = sortBy === 'price' ? b.price : b.rating;
+        return order === 'asc' ? aVal - bVal : bVal - aVal;
+      }),
+    [list, sortBy, order],
+  );
 
-    if (sortParams.type === 'price') {
-      return (a.price - b.price) * modifier;
-    }
-
-    if (sortParams.type === 'popularity') {
-      return (a.rating - b.rating) * modifier;
-    }
-
-    return 0;
-  });
-
-  const handleTypeChange = (type: SortType) => {
-    setSortParams((prev) => ({ ...prev, type }));
+  const handleTypeChange = (value: string) => {
+    const params = new URLSearchParams(searchParams);
+    params.set('sort', value);
+    setSearchParams(params);
   };
 
-  const handleOrderChange = (order: SortOrder) => {
-    setSortParams((prev) => ({ ...prev, order }));
+  const handleOrderChange = (value: string) => {
+    const params = new URLSearchParams(searchParams);
+    params.set('order', value);
+    setSearchParams(params);
   };
 
   return {
-    sortedCamerasList,
-    setSortParams,
+    sortParams: { sortBy, order },
+    sortedCamerasList: sortedList,
     handleTypeChange,
     handleOrderChange,
-    sortParams,
   };
 };

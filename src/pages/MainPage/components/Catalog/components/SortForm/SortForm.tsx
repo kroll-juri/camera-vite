@@ -12,7 +12,7 @@ export const SortForm = ({ handleTypeChange, handleOrderChange, sortParams }: So
                 type="radio"
                 id="sortPrice"
                 name="sort"
-                checked={sortParams.type === 'price'}
+                checked={sortParams.sortBy === 'price'}
                 onChange={() => handleTypeChange('price')}
               />
               <label htmlFor="sortPrice">по цене</label>
@@ -22,7 +22,7 @@ export const SortForm = ({ handleTypeChange, handleOrderChange, sortParams }: So
                 type="radio"
                 id="sortPopular"
                 name="sort"
-                checked={sortParams.type === 'popularity'}
+                checked={sortParams.sortBy === 'popularity'}
                 onChange={() => handleTypeChange('popularity')}
               />
               <label htmlFor="sortPopular">по популярности</label>

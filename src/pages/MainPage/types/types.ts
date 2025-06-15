@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, SetStateAction } from 'react';
+import React, { ChangeEvent, Dispatch, SetStateAction } from 'react';
 
 import { Camera } from '@slice/camera/types/types';
 
@@ -47,15 +47,10 @@ export interface CatalogFilterProps {
 }
 
 export interface PriceRangeProps {
-  onChangeHandler: (evt: ChangeEvent<HTMLInputElement>) => void;
   filter: FilterStateProps;
-  setFilter: Dispatch<SetStateAction<FilterStateProps>>;
+  setFilter: React.Dispatch<React.SetStateAction<FilterStateProps>>;
+  onChangeHandler: (e: ChangeEvent<HTMLInputElement>) => void;
 }
-
-// export interface CatalogAddItemProps {
-//   isOpen: boolean;
-//   setIsOpen: Dispatch<SetStateAction<boolean>>;
-// };
 
 export type FilterInputChangeHandler = (value: SetStateAction<FilterStateProps>) => void;
 
@@ -64,8 +59,8 @@ export interface CardListProps {
 }
 
 export interface SortParams {
-  type: 'price' | 'popularity';
-  order: 'increase' | 'decrease';
+  sortBy: string;
+  order: string;
 }
 
 export interface SortFormProps {

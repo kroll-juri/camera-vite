@@ -1,7 +1,7 @@
 import { CamerasFilterGroups, CamerasLevel } from '@main-page/const/const';
 import { CameraLevelProps } from '@main-page/types/types';
 
-export const CameraLevel = ({ onChangeHandler, filter }: CameraLevelProps) => {
+export const CameraLevel = ({ filter, onChangeHandler }: CameraLevelProps) => {
   const groupValue = CamerasFilterGroups.level;
 
   return (
@@ -9,7 +9,7 @@ export const CameraLevel = ({ onChangeHandler, filter }: CameraLevelProps) => {
       className="catalog-filter__block"
       data-testid="camera-level"
     >
-      <legend className="title title&#45;&#45;h5">{groupValue}</legend>
+      <legend className="title title--h5">{groupValue}</legend>
       {(Object.entries(CamerasLevel) as Array<[keyof typeof CamerasLevel, string]>).map(([key, value]) => (
         <div
           className="custom-checkbox catalog-filter__item"
@@ -18,13 +18,13 @@ export const CameraLevel = ({ onChangeHandler, filter }: CameraLevelProps) => {
           <label>
             <input
               type="checkbox"
-              name={key}
+              name="level"
+              value={key}
               checked={filter.level.includes(key)}
               onChange={onChangeHandler}
-              value={key}
               data-group-name={groupValue}
             />
-            <span className="custom-checkbox__icon"></span>
+            <span className="custom-checkbox__icon" />
             <span className="custom-checkbox__label">{value}</span>
           </label>
         </div>

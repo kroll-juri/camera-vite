@@ -1,17 +1,18 @@
 import { ChangeEvent } from 'react';
 
-import { CamerasCategory, CamerasFilterGroups } from '@main-page/const/const';
+import { CamerasFilterGroups } from '@main-page/const/const';
 import { FilterInputChangeHandler, FilterStateProps } from '@main-page/types/types';
 import { EventHandler } from '@shared-types/types';
 
 export const filterInputChangeHandler = (setFn: FilterInputChangeHandler): EventHandler =>
   function (evt: ChangeEvent<HTMLInputElement>): void {
     const { value, checked, dataset, type, name } = evt.target;
+
     if (type === 'radio') {
-      const categoryKey = value as keyof typeof CamerasCategory;
+      // value уже ключ категории ('photocamera' или 'videocamera')
       setFn((prevState) => ({
         ...prevState,
-        category: CamerasCategory[categoryKey],
+        category: value,
       }));
     } else if (type === 'checkbox' && dataset.groupName === CamerasFilterGroups.type) {
       setFn(
@@ -20,7 +21,7 @@ export const filterInputChangeHandler = (setFn: FilterInputChangeHandler): Event
           type: checked ? [...prevState.type, value] : prevState.type.filter((item) => item !== value),
         }),
       );
-    } else if (type === 'checkbox' && evt.target.dataset.groupName === CamerasFilterGroups.level) {
+    } else if (type === 'checkbox' && dataset.groupName === CamerasFilterGroups.level) {
       setFn((prevState) => ({
         ...prevState,
         level: checked ? [...prevState.level, value] : prevState.level.filter((item) => item !== value),

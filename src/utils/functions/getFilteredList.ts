@@ -1,6 +1,6 @@
 import { Camera } from '@slice/camera/types/types';
 
-import { CamerasLevel, CamerasType } from '@main-page/const/const';
+import { CamerasCategory, CamerasLevel, CamerasType } from '@main-page/const/const';
 import { FilterStateProps } from '@main-page/types/types';
 
 export const getFilteredList = (list: Camera[], state: FilterStateProps): Camera[] => {
@@ -10,8 +10,10 @@ export const getFilteredList = (list: Camera[], state: FilterStateProps): Camera
   const priceMin = parseInt(state.priceFrom, 10);
   const priceMax = parseInt(state.priceTo, 10);
 
+  // Фильтрация категории — преобразуем ключ в значение из CamerasCategory
   if (state.category) {
-    result = result.filter((item) => item.category === state.category);
+    const categoryLabel = CamerasCategory[state.category as keyof typeof CamerasCategory];
+    result = result.filter((item) => item.category === categoryLabel);
   }
 
   if (levelList.length > 0) {
