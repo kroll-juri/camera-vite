@@ -11,6 +11,6 @@ export const getCameraLoadingStatus = (state: Pick<State, Namespace.Camera>) => 
 export const getCurrentCameraLoadingStatus = (state: Pick<State, Namespace.Camera>) =>
   state[Namespace.Camera].isCurrentCameraLoading;
 //
-// export const getActualCamera = (state: Pick<State, Namespace.Camera>) => state[Namespace.Camera].actualCamera;
+export const getActualCamera = (state: Pick<State, Namespace.Camera>) => state[Namespace.Camera].actualCamera;
 
 export const getSimilarList = (state: Pick<State, Namespace.Camera>) => state[Namespace.Camera].similarList;

@@ -1,8 +1,8 @@
-import { modalController } from '@components/blocks/ModalComponent/helpers';
 import { IconClose } from '@app-ui/IconClose';
 
 import { changeCameraCategoryAdapter } from '@utils/functions/changeCameraCategoryAdapter';
 
+import { modalController } from '@components/blocks/ModalComponent/helpers';
 import { PhoneItem } from '@main-page/components/Catalog/components/CatalogCallItem/components/PhoneItem';
 import { CatalogCallItemProps } from '@main-page/types/types';
 
@@ -20,11 +20,11 @@ export const CatalogCallItem = ({ props, setModalState }: CatalogCallItemProps) 
           <picture>
             <source
               type="image/webp"
-              srcSet={`${previewImgWebp}, ${previewImgWebp2x}`}
+              srcSet={`/${previewImgWebp}, /${previewImgWebp2x}`}
             />
             <img
-              src={previewImg}
-              srcSet={previewImg2x}
+              src={`/${previewImg}`}
+              srcSet={`/${previewImg2x}`}
               width="140"
               height="120"
               alt={name}

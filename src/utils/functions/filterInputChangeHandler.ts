@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react';
 
-import { CamerasCategory, CamerasFilterGroups } from '@main-page/components/Catalog/components/SortForm/types/types';
+import { CamerasCategory, CamerasFilterGroups } from '@main-page/const/const';
 import { FilterInputChangeHandler, FilterStateProps } from '@main-page/types/types';
 import { EventHandler } from '@shared-types/types';
 

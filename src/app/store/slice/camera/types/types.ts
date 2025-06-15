@@ -1,3 +1,5 @@
+// TODO - дублируется
+
 export enum CameraType {
   Collections = 'Коллекционная',
   Momentum = 'Моментальная',
@@ -5,7 +7,7 @@ export enum CameraType {
   Film = 'Плёночная',
 }
 
-export enum CameraCategory {
+export enum CamerasCategory {
   Video = 'Видеокамера',
   Photo = 'Фотоаппарат',
 }
@@ -21,7 +23,7 @@ export interface Camera {
   name: string;
   vendorCode: string;
   type: CameraType;
-  category: CameraCategory;
+  category: CamerasCategory;
   description: string;
   level: CameraLevel;
   price: number;

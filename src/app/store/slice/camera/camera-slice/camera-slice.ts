@@ -30,7 +30,7 @@ const cameraSlice = createSlice({
       })
       .addCase(fetchCameraListData.fulfilled, (state, action) => {
         state.camera = action.payload;
-        // state.actualCamera = action.payload;
+        state.actualCamera = action.payload;
         state.isCameraLoading = false;
       })
       .addCase(fetchCameraListData.rejected, (state) => {
@@ -60,3 +60,4 @@ const cameraSlice = createSlice({
 });
 
 export { cameraSlice };
+export const { setActualCamera } = cameraSlice.actions;
