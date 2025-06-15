@@ -74,14 +74,16 @@ export interface SortFormProps {
   sortParams: SortParams;
 }
 
-export interface PaginationProps {
-  maxAmount: number;
-  page: number;
+interface PaginationProps {
   onClickHandler: (value: string) => void;
 }
 
-export interface PaginationItemProps {
-  value: number;
+export interface PaginationListProps extends PaginationProps {
+  maxAmount: number;
   page: number;
-  onClickHandler: (value: string) => void;
+}
+
+export interface PaginationItemProps extends PaginationProps {
+  value: number;
+  isActive: boolean;
 }

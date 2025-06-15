@@ -4,16 +4,17 @@ import { routeConfig } from '@app/AppRouter/routeConfig';
 
 import { PaginationItemProps } from '@main-page/types/types';
 
-export const PaginationItem = ({ value, page, onClickHandler }: PaginationItemProps) => {
+export const PaginationItem = ({ value, onClickHandler, isActive }: PaginationItemProps) => {
   const attrValue = value.toString();
-  const isActive = page === value;
 
   return (
     <li className="pagination__item">
       <Link
-        className={`pagination__link ${isActive ? 'pagination__link&#45;&#45;active' : ''}`}
+        className={`pagination__link ${isActive ? 'pagination__link--active' : ''}`}
         to={routeConfig.Index}
-        onClick={() => onClickHandler(attrValue)}
+        onClick={() => {
+          onClickHandler(attrValue);
+        }}
       >
         {attrValue}
       </Link>
