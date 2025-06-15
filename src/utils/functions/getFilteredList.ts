@@ -10,7 +10,6 @@ export const getFilteredList = (list: Camera[], state: FilterStateProps): Camera
   const priceMin = parseInt(state.priceFrom, 10);
   const priceMax = parseInt(state.priceTo, 10);
 
-  // Фильтрация категории — преобразуем ключ в значение из CamerasCategory
   if (state.category) {
     const categoryLabel = CamerasCategory[state.category as keyof typeof CamerasCategory];
     result = result.filter((item) => item.category === categoryLabel);
