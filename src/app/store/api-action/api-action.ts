@@ -9,7 +9,7 @@ import { apiRouteConfig } from '@api/api-routes';
 
 import { ReviewFormData } from '@product-page/types/types';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { OrderType } from '@shared-types/types';
+import { OrderType, SimilarResponse } from '@shared-types/types';
 
 const api = createAPI();
 
@@ -40,7 +40,7 @@ const fetchReviewData = createAsyncThunk<Review[], string>(
   'review/fetchReviewData',
   async (cameraId: string): Promise<Review[]> => {
     try {
-      const { data } = await api.get<Review[]>(`${apiRouteConfig.CamerasApiRoute}/${cameraId}/reviews`);
+      const { data } = await api.get<Review[]>(`${apiRouteConfig.ReviewsApiRoute}/?cameraId=${cameraId}`);
       return data;
     } catch (error) {
       toast.warn('Error fetching review data');
@@ -50,18 +50,23 @@ const fetchReviewData = createAsyncThunk<Review[], string>(
   },
 );
 
+
+
 const fetchSimilarListData = createAsyncThunk<Camera[], string>(
-  'review/fetchSimilarListData',
+  'similar/fetchSimilarListData',
   async (cameraId: string): Promise<Camera[]> => {
     try {
-      const { data } = await api.get<Camera[]>(`${apiRouteConfig.CamerasApiRoute}/${cameraId}/similar`);
-      return data;
-    } catch (error) {
-      toast.warn('Error fetching similar cameras data');
-    }
+      const { data } = await api.get<SimilarResponse[]>(
+        `${apiRouteConfig.SimilarApiRoute}?cameraId=${cameraId}`
+      );
 
-    return [];
-  },
+      const match = data.find((entry) => String(entry.cameraId) === cameraId);
+      return match?.items || [];
+    } catch (error) {
+      toast.warn('Ошибка при загрузке похожих камер');
+      return [];
+    }
+  }
 );
 
 const postOrderAction = createAsyncThunk<

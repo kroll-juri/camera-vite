@@ -3,6 +3,7 @@ class ApiRouteConfig {
   #promo = '/promo';
   #orders = '/orders';
   #reviews = '/reviews';
+  #similar = '/similar'
 
   get CamerasApiRoute() {
     return this.#cameras;
@@ -18,6 +19,10 @@ class ApiRouteConfig {
 
   get ReviewsApiRoute() {
     return this.#reviews;
+  }
+
+  get SimilarApiRoute() {
+    return this.#similar;
   }
 }
 

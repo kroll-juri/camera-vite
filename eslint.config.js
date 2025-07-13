@@ -102,5 +102,6 @@ export default defineConfig([
     'eslint.config.js',
     'tsconfig.json',
     'vite.config.ts',
+    'service/server/fetchData.js'
   ]),
 ]);
