@@ -20,6 +20,7 @@ export const ActiveModal = ({
   const modalName = useAppSelector(getModalName);
 
   return (
+
     <ModalComponent
       isActive={modalName !== modalController.noModal}
       className={''}

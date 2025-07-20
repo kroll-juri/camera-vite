@@ -12,6 +12,8 @@ export const ButtonBuy = ({ cameraId }: ButtonBuyProps) => {
   const dispatch = useAppDispatch();
   const camerasList = useAppSelector(getCamerasList);
   const activeCard = camerasList.find((item) => item.id === cameraId);
+
+
   return (
     <button
       className="btn btn--purple product-card__btn"
@@ -24,6 +26,7 @@ export const ButtonBuy = ({ cameraId }: ButtonBuyProps) => {
             title: modalController.addBasketTitle,
           }),
         );
+        console.log(activeCard);
       }}
     >
       Купить
