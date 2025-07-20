@@ -26,7 +26,6 @@ export const ButtonBuy = ({ cameraId }: ButtonBuyProps) => {
             title: modalController.addBasketTitle,
           }),
         );
-        console.log(activeCard);
       }}
     >
       Купить
