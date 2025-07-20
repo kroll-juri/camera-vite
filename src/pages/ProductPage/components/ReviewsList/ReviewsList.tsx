@@ -21,7 +21,6 @@ import { ReviewListProps } from '@product-page/types/types';
 export const ReviewsList = ({ props: reviewsList, activeCard }: ReviewListProps) => {
   const { setLastReviewRef, elementsShowCount, isElementsListLoaded, handleReviewShowClick } =
     useShowElementsScroll(reviewsList);
-
   const sortedReviews =
     reviewsList && getSortedList(reviewsList, (a, b) => dayjs(b.createAt).unix() - dayjs(a.createAt).unix());
   const dispatch = useAppDispatch();

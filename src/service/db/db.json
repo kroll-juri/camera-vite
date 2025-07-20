@@ -1,7 +1,7 @@
 {
   "cameras": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Ретрокамера Dus Auge lV",
       "vendorCode": "DA4IU67AD5",
       "type": "Коллекционная",
@@ -17,7 +17,7 @@
       "reviewCount": 7
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "FastShot MR-5",
       "vendorCode": "JH34KHN895",
       "type": "Моментальная",
@@ -33,7 +33,7 @@
       "reviewCount": 12
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Instaprinter P2",
       "vendorCode": "KLU789GH56",
       "type": "Цифровая",
@@ -49,7 +49,7 @@
       "reviewCount": 20
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Орлёнок",
       "vendorCode": "O78DFGSD83",
       "type": "Плёночная",
@@ -65,7 +65,7 @@
       "reviewCount": 5
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Van Shot",
       "vendorCode": "YU7RT5GH76",
       "type": "Коллекционная",
@@ -81,7 +81,7 @@
       "reviewCount": 6
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Click Sap",
       "vendorCode": "KLN54H76F5",
       "type": "Плёночная",
@@ -97,7 +97,7 @@
       "reviewCount": 23
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Look 54",
       "vendorCode": "NB54Y",
       "type": "Цифровая",
@@ -113,7 +113,7 @@
       "reviewCount": 20
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Look SF3",
       "vendorCode": "NBSF3",
       "type": "Цифровая",
@@ -129,7 +129,7 @@
       "reviewCount": 13
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Van60",
       "vendorCode": "YU7RTVA60",
       "type": "Цифровая",
@@ -145,7 +145,7 @@
       "reviewCount": 28
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Van Click",
       "vendorCode": "YU7RTCV72",
       "type": "Моментальная",
@@ -161,7 +161,7 @@
       "reviewCount": 6
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "SP 520",
       "vendorCode": "JQ756",
       "type": "Коллекционная",
@@ -177,7 +177,7 @@
       "reviewCount": 12
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Look Shot",
       "vendorCode": "NB569SH",
       "type": "Цифровая",
@@ -193,7 +193,7 @@
       "reviewCount": 14
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Look Shot 5",
       "vendorCode": "NB569SH5",
       "type": "Плёночная",
@@ -209,7 +209,7 @@
       "reviewCount": 21
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "See Shot",
       "vendorCode": "SS56GH",
       "type": "Цифровая",
@@ -225,7 +225,7 @@
       "reviewCount": 14
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "SS 54F",
       "vendorCode": "SS54FGH",
       "type": "Цифровая",
@@ -241,7 +241,7 @@
       "reviewCount": 19
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Small Shot 4",
       "vendorCode": "SS4CFR9",
       "type": "Цифровая",
@@ -257,7 +257,7 @@
       "reviewCount": 9
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Look Identify",
       "vendorCode": "LD2000",
       "type": "Коллекционная",
@@ -273,7 +273,7 @@
       "reviewCount": 8
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "LI Shot 76",
       "vendorCode": "LIS76FD",
       "type": "Цифровая",
@@ -289,7 +289,7 @@
       "reviewCount": 1
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Pro Look 4",
       "vendorCode": "PL4CD",
       "type": "Цифровая",
@@ -305,7 +305,7 @@
       "reviewCount": 19
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Pro Look 56F",
       "vendorCode": "PL67T56F",
       "type": "Цифровая",
@@ -321,7 +321,7 @@
       "reviewCount": 8
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Pro Look N",
       "vendorCode": "DRPLN5",
       "type": "Цифровая",
@@ -337,7 +337,7 @@
       "reviewCount": 21
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Pro Shot",
       "vendorCode": "PS78DR",
       "type": "Цифровая",
@@ -353,7 +353,7 @@
       "reviewCount": 22
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Go See",
       "vendorCode": "GS45E3",
       "type": "Цифровая",
@@ -369,7 +369,7 @@
       "reviewCount": 22
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Prof Lite 45",
       "vendorCode": "TG45Q",
       "type": "Цифровая",
@@ -385,7 +385,7 @@
       "reviewCount": 4
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Prof Lite Q5",
       "vendorCode": "TG5Q5",
       "type": "Цифровая",
@@ -401,7 +401,7 @@
       "reviewCount": 23
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "GQ Lite",
       "vendorCode": "GO89L",
       "type": "Цифровая",
@@ -417,7 +417,7 @@
       "reviewCount": 20
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Life Pro",
       "vendorCode": "PH67F9R",
       "type": "Коллекционная",
@@ -433,7 +433,7 @@
       "reviewCount": 2
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Proksy",
       "vendorCode": "PF569K",
       "type": "Цифровая",
@@ -449,7 +449,7 @@
       "reviewCount": 14
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "Prof Go",
       "vendorCode": "PG90J",
       "type": "Цифровая",
@@ -465,7 +465,7 @@
       "reviewCount": 6
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Prof Shot A5",
       "vendorCode": "JHF67",
       "type": "Цифровая",
@@ -481,7 +481,7 @@
       "reviewCount": 17
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "Glu D45",
       "vendorCode": "HF573E",
       "type": "Плёночная",
@@ -497,7 +497,7 @@
       "reviewCount": 3
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "Dru pro",
       "vendorCode": "DP89",
       "type": "Моментальная",
@@ -513,7 +513,7 @@
       "reviewCount": 26
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "Amazing Go",
       "vendorCode": "AD345J",
       "type": "Коллекционная",
@@ -529,7 +529,7 @@
       "reviewCount": 1
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "Prof Grey TG6",
       "vendorCode": "TG6PG45",
       "type": "Моментальная",
@@ -545,7 +545,7 @@
       "reviewCount": 11
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "Click Pro",
       "vendorCode": "SSW01",
       "type": "Плёночная",
@@ -561,7 +561,7 @@
       "reviewCount": 10
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "Click Lite R",
       "vendorCode": "SSW45",
       "type": "Цифровая",
@@ -577,7 +577,7 @@
       "reviewCount": 11
     },
     {
-      "id": 37,
+      "id": "37",
       "name": "QI Go 56",
       "vendorCode": "QI56HGF",
       "type": "Цифровая",
@@ -593,7 +593,7 @@
       "reviewCount": 1
     },
     {
-      "id": 38,
+      "id": "38",
       "name": "2000 Go",
       "vendorCode": "2000GH",
       "type": "Моментальная",
@@ -609,7 +609,7 @@
       "reviewCount": 11
     },
     {
-      "id": 39,
+      "id": "39",
       "name": "Prof g",
       "vendorCode": "PRC56H",
       "type": "Цифровая",
@@ -625,7 +625,7 @@
       "reviewCount": 1
     },
     {
-      "id": 40,
+      "id": "40",
       "name": "Prof Lite Zero",
       "vendorCode": "PL34ZO",
       "type": "Цифровая",
@@ -789,7 +789,8 @@
           "rating": 4,
           "reviewCount": 2
         }
-      ]
+      ],
+      "id": "f915"
     },
     {
       "cameraId": 2,
@@ -938,7 +939,8 @@
           "rating": 3,
           "reviewCount": 8
         }
-      ]
+      ],
+      "id": "5451"
     },
     {
       "cameraId": 3,
@@ -1087,7 +1089,8 @@
           "rating": 3,
           "reviewCount": 17
         }
-      ]
+      ],
+      "id": "d676"
     },
     {
       "cameraId": 4,
@@ -1236,7 +1239,8 @@
           "rating": 3,
           "reviewCount": 8
         }
-      ]
+      ],
+      "id": "db75"
     },
     {
       "cameraId": 5,
@@ -1385,7 +1389,8 @@
           "rating": 4,
           "reviewCount": 28
         }
-      ]
+      ],
+      "id": "2d12"
     },
     {
       "cameraId": 6,
@@ -1534,7 +1539,8 @@
           "rating": 3,
           "reviewCount": 8
         }
-      ]
+      ],
+      "id": "7255"
     },
     {
       "cameraId": 7,
@@ -1683,7 +1689,8 @@
           "rating": 3,
           "reviewCount": 14
         }
-      ]
+      ],
+      "id": "1fac"
     },
     {
       "cameraId": 8,
@@ -1832,7 +1839,8 @@
           "rating": 3,
           "reviewCount": 14
         }
-      ]
+      ],
+      "id": "daa1"
     },
     {
       "cameraId": 9,
@@ -1981,7 +1989,8 @@
           "rating": 2,
           "reviewCount": 20
         }
-      ]
+      ],
+      "id": "f157"
     },
     {
       "cameraId": 10,
@@ -2130,7 +2139,8 @@
           "rating": 3,
           "reviewCount": 8
         }
-      ]
+      ],
+      "id": "7689"
     },
     {
       "cameraId": 11,
@@ -2279,7 +2289,8 @@
           "rating": 4,
           "reviewCount": 28
         }
-      ]
+      ],
+      "id": "436e"
     },
     {
       "cameraId": 12,
@@ -2428,7 +2439,8 @@
           "rating": 3,
           "reviewCount": 21
         }
-      ]
+      ],
+      "id": "9471"
     },
     {
       "cameraId": 13,
@@ -2577,7 +2589,8 @@
           "rating": 3,
           "reviewCount": 20
         }
-      ]
+      ],
+      "id": "cd3b"
     },
     {
       "cameraId": 14,
@@ -2726,7 +2739,8 @@
           "rating": 3,
           "reviewCount": 17
         }
-      ]
+      ],
+      "id": "5316"
     },
     {
       "cameraId": 15,
@@ -2875,7 +2889,8 @@
           "rating": 3,
           "reviewCount": 17
         }
-      ]
+      ],
+      "id": "4c62"
     },
     {
       "cameraId": 16,
@@ -3024,7 +3039,8 @@
           "rating": 2,
           "reviewCount": 20
         }
-      ]
+      ],
+      "id": "c64d"
     },
     {
       "cameraId": 17,
@@ -3173,7 +3189,8 @@
           "rating": 3,
           "reviewCount": 14
         }
-      ]
+      ],
+      "id": "0476"
     },
     {
       "cameraId": 18,
@@ -3322,7 +3339,8 @@
           "rating": 3,
           "reviewCount": 14
         }
-      ]
+      ],
+      "id": "d712"
     },
     {
       "cameraId": 19,
@@ -3471,7 +3489,8 @@
           "rating": 3,
           "reviewCount": 21
         }
-      ]
+      ],
+      "id": "856b"
     },
     {
       "cameraId": 20,
@@ -3620,7 +3639,8 @@
           "rating": 3,
           "reviewCount": 21
         }
-      ]
+      ],
+      "id": "a9a6"
     },
     {
       "cameraId": 21,
@@ -3769,7 +3789,8 @@
           "rating": 2,
           "reviewCount": 20
         }
-      ]
+      ],
+      "id": "50e7"
     },
     {
       "cameraId": 22,
@@ -3918,7 +3939,8 @@
           "rating": 2,
           "reviewCount": 20
         }
-      ]
+      ],
+      "id": "3bdd"
     },
     {
       "cameraId": 23,
@@ -4067,7 +4089,8 @@
           "rating": 2,
           "reviewCount": 20
         }
-      ]
+      ],
+      "id": "3141"
     },
     {
       "cameraId": 24,
@@ -4216,7 +4239,8 @@
           "rating": 3,
           "reviewCount": 17
         }
-      ]
+      ],
+      "id": "3e75"
     },
     {
       "cameraId": 25,
@@ -4365,7 +4389,8 @@
           "rating": 3,
           "reviewCount": 17
         }
-      ]
+      ],
+      "id": "5481"
     },
     {
       "cameraId": 26,
@@ -4514,7 +4539,8 @@
           "rating": 3,
           "reviewCount": 21
         }
-      ]
+      ],
+      "id": "57d0"
     },
     {
       "cameraId": 27,
@@ -4663,7 +4689,8 @@
           "rating": 3,
           "reviewCount": 17
         }
-      ]
+      ],
+      "id": "86e3"
     },
     {
       "cameraId": 28,
@@ -4812,7 +4839,8 @@
           "rating": 3,
           "reviewCount": 17
         }
-      ]
+      ],
+      "id": "3362"
     },
     {
       "cameraId": 29,
@@ -4961,7 +4989,8 @@
           "rating": 2,
           "reviewCount": 20
         }
-      ]
+      ],
+      "id": "393d"
     },
     {
       "cameraId": 30,
@@ -5110,7 +5139,8 @@
           "rating": 3,
           "reviewCount": 14
         }
-      ]
+      ],
+      "id": "7142"
     },
     {
       "cameraId": 31,
@@ -5259,7 +5289,8 @@
           "rating": 3,
           "reviewCount": 17
         }
-      ]
+      ],
+      "id": "8748"
     },
     {
       "cameraId": 32,
@@ -5408,7 +5439,8 @@
           "rating": 3,
           "reviewCount": 23
         }
-      ]
+      ],
+      "id": "9594"
     },
     {
       "cameraId": 33,
@@ -5557,7 +5589,8 @@
           "rating": 4,
           "reviewCount": 28
         }
-      ]
+      ],
+      "id": "aeea"
     },
     {
       "cameraId": 34,
@@ -5706,7 +5739,8 @@
           "rating": 3,
           "reviewCount": 17
         }
-      ]
+      ],
+      "id": "cee9"
     },
     {
       "cameraId": 35,
@@ -5855,7 +5889,8 @@
           "rating": 3,
           "reviewCount": 8
         }
-      ]
+      ],
+      "id": "f000"
     },
     {
       "cameraId": 36,
@@ -6004,7 +6039,8 @@
           "rating": 3,
           "reviewCount": 21
         }
-      ]
+      ],
+      "id": "4d89"
     },
     {
       "cameraId": 37,
@@ -6153,7 +6189,8 @@
           "rating": 3,
           "reviewCount": 21
         }
-      ]
+      ],
+      "id": "5200"
     },
     {
       "cameraId": 38,
@@ -6302,7 +6339,8 @@
           "rating": 3,
           "reviewCount": 8
         }
-      ]
+      ],
+      "id": "4d62"
     },
     {
       "cameraId": 39,
@@ -6451,7 +6489,8 @@
           "rating": 3,
           "reviewCount": 21
         }
-      ]
+      ],
+      "id": "43fb"
     },
     {
       "cameraId": 40,
@@ -6600,7 +6639,8 @@
           "rating": 2,
           "reviewCount": 20
         }
-      ]
+      ],
+      "id": "068b"
     }
   ],
   "reviews": [
@@ -11583,11 +11623,20 @@
       "review": "Молчит хомяк, дальше идёт",
       "rating": 5,
       "createAt": "2025-05-18T05:47:43.129Z"
+    },
+    {
+      "id": "3b6e",
+      "cameraId": "32",
+      "userName": "Yury",
+      "advantage": "Qwertyqwerty",
+      "disadvantage": "333332lldldldldldld",
+      "review": "333332lldldldldldld",
+      "rating": 0
     }
   ],
   "promo": [
     {
-      "id": 7,
+      "id": "7",
       "name": "Look 54",
       "previewImg": "img/content/promo-look-54.jpg",
       "previewImg2x": "img/content/promo-look-54@2x.jpg",
@@ -11595,7 +11644,7 @@
       "previewImgWebp2x": "img/content/promo-look-54@2x.webp"
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "Click Pro",
       "previewImg": "img/content/promo_click_pro.jpg",
       "previewImg2x": "img/content/promo_click_pro@2x.jpg",
@@ -11603,12 +11652,24 @@
       "previewImgWebp2x": "img/content/promo_click_pro@2x.webp"
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "Click Lite R",
       "previewImg": "img/content/promo_click-lite-r.jpg",
       "previewImg2x": "img/content/promo_click-lite-r@2x.jpg",
       "previewImgWebp": "img/content/promo_click-lite-r.webp",
       "previewImgWebp2x": "img/content/promo_click-lite-r@2x.webp"
+    }
+  ],
+  "orders": [
+    {
+      "id": "acaa",
+      "coupon": null,
+      "camerasIds": [32, 10, "10", "32", "13", "23"]
+    },
+    {
+      "id": "7227",
+      "coupon": null,
+      "camerasIds": [3]
     }
   ]
 }

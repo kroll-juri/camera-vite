@@ -78,6 +78,7 @@ const postOrderAction = createAsyncThunk<
 >('order/postOrder', async (requestData: OrderType, { rejectWithValue }) => {
   try {
     await api.post(apiRouteConfig.OrdersApiRoute, requestData);
+    console.log(requestData);
   } catch (error) {
     return rejectWithValue('Не удалось оформить заказ. Попробуйте снова.');
   }

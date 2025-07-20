@@ -29,7 +29,7 @@ export const Basket = () => {
     promoItems: promoItemsCount,
   });
 
-  const cameraIdList = basketStorageData.map((item) => item.id);
+  const cameraIdList = basketStorageData.map((item) => +item.id);
 
   const basketData = getUniqueList(basketStorageData, 'id');
 
